@@ -7,7 +7,8 @@ function App() {
       <Header />
       <TodoList todos={[
         {title: "Do dishes", isCompleted: true},
-        {title: "Mow the lawn", isCompleted: false}
+        {title: "Mow the lawn", isCompleted: false},
+        {title: "Be an awesome programmer!", description: "Finish go-react app", isCompleted: false}
         ]}/>
     </div>
   );

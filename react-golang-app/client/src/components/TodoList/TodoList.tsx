@@ -1,4 +1,6 @@
 import { Todo } from "../../entities/Todo"
+import { TodoItem } from "./TodoItem"
+import "./TodoList.scss"
 
 type Props = {
     todos: Todo[];
@@ -6,10 +8,16 @@ type Props = {
 
 export const TodoList: React.FC<Props> = ({ todos }) => {
     return (
-        <ul>
+        <ul className="todo-list">
             {
                 todos.map((todo, idx) => (
-                    <li key={idx}>{todo.title}</li>
+                    <li key={idx}>
+                        <TodoItem 
+                            title={todo.title} 
+                            description={todo.description} 
+                            isCompleted={todo.isCompleted} 
+                        />
+                    </li>
                 ))
             }
         </ul>
